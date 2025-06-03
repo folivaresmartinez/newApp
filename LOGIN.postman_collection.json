@@ -1,0 +1,988 @@
+{
+	"info": {
+		"_postman_id": "973e75cf-5996-40d2-b14c-8020eb38cbe8",
+		"name": "LOGIN",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "7115034",
+		"_collection_link": "https://orange-meadow-934829.postman.co/workspace/Sabadell~e043d538-24a4-4e65-9e94-d634a049c1ac/collection/7115034-973e75cf-5996-40d2-b14c-8020eb38cbe8?action=share&source=collection_link&creator=7115034"
+	},
+	"item": [
+		{
+			"name": "Login PRE",
+			"item": [
+				{
+					"name": "1 - Login API BSM",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.set(\"home-banking-id\",\"2175034790\")"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es"
+							},
+							{
+								"key": "Accept",
+								"value": "{{BSM_API_apiversion}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"brand\":\"SAB\",\"compilationType\":\"debug\",\"contract\":\"\",\"csid\":\"40acaa00-9870-4717-9950-b02f1b4547d9\",\"deviceInfo\":\"en-US GEO() ANDROID 13 sdk_gphone64_arm64 NATIVE_APP 25.4.0 STANDARD\",\"devicePrint\":\"\",\"geolocationData\":\"{\\\"TIMESTAMP\\\":\\\"2025-04-26T15:07:43Z\\\",\\\"TimeZone\\\":\\\"2.0\\\",\\\"HardwareID\\\":\\\"e265223b-ac2a-421a-bb5f-ccaad545325b\\\",\\\"GeoLocationInfo\\\":[{\\\"Longitude\\\":\\\"-122.084\\\",\\\"Latitude\\\":\\\"37.42199833\\\",\\\"HorizontalAccuracy\\\":\\\"5\\\",\\\"Altitude\\\":\\\"5\\\",\\\"AltitudeAccuracy\\\":\\\"5\\\",\\\"Timestamp\\\":\\\"1745680054719\\\",\\\"Heading\\\":\\\"0\\\",\\\"Speed\\\":\\\"0\\\",\\\"Status\\\":\\\"0\\\"}],\\\"DeviceModel\\\":\\\"sdk_gphone64_arm64\\\",\\\"MultitaskingSupported\\\":true,\\\"DeviceSystemName\\\":\\\"Android\\\",\\\"DeviceSystemVersion\\\":\\\"33\\\",\\\"Languages\\\":\\\"en\\\",\\\"WiFiNetworksData\\\":{\\\"BBSID\\\":\\\"00:13:10:85:fe:01\\\",\\\"SignalStrength\\\":\\\"-50\\\",\\\"SSID\\\":\\\"AndroidWifi\\\"},\\\"BatteryInfo\\\":{\\\"Status\\\":\\\"BATTERY_STATUS_NOT_CHARGING\\\",\\\"Plugged\\\":0,\\\"Level\\\":100,\\\"Voltage\\\":5,\\\"Technology\\\":\\\"Li-ion\\\",\\\"Health\\\":\\\"GOOD\\\"},\\\"CellTowerId\\\":\\\"47108\\\",\\\"LocationAreaCode\\\":\\\"8514\\\",\\\"ScreenSize\\\":\\\"1440x2892\\\",\\\"RSA_ApplicationKey\\\":\\\"891E095CAE3E0BB71AD41ACAA16A3E50\\\",\\\"MCC\\\":\\\"310\\\",\\\"MNC\\\":\\\"260\\\",\\\"OS_ID\\\":\\\"70692d14f278381d\\\",\\\"SDK_VERSION\\\":\\\"6.0\\\",\\\"Compromised\\\":0,\\\"Emulator\\\":8,\\\"PhoneCall_Status\\\":\\\"0\\\",\\\"DeviceName\\\":\\\"emu64a\\\"}\",\"inscriptionKey\":\"\",\"lastKnownBrand\":0,\"lastRequestDate\":\"2025-04-26T17:07:11Z\",\"loginType\":1,\"newDevice\":false,\"parametersBS\":[{\"key\":\"deviceId\",\"value\":\"70692d14f278381d\"},{\"key\":\"userName\",\"value\":\"aR3nEPDZcRwyxbIWiLRB7iCSmf7sVyW4h1YBm0juQpZcuUhcxPUsaBBk98ME+qQ4+FPlPP/1oSKzAtqrYnBC5lOBYnQ07jLiFfLz13FZOSqLALO8BHD5LOaWWgGD+fIYb1uxOJUL7WS7oSDWHJWuXfM8CyFqNu2xZIiFHAm6N1ucMRHPs68Z6XscUyIHMRw0eLJkoyRcHwZhSuhTf2BHVyYijUitW1r6d0od2mwuT85km2Ece8YCKPYzzoeKROhKKXRh3KJvcLXHHXlMWC+jPMJHXGlzTcEpfPLYTXjBqTScSGxCwch1mMIlglwFf8wc6vh2D4D7W/u90K05AOOZdw\\u003d\\u003d\"},{\"key\":\"password\",\"value\":\"KunN9rDR/8zCPHx4z5WCDP67MXb4So1nrVq1hHKF8Dt2/nbSd4k9+7neNsLIF8YjEPUhqlZt/sjlB745Lz/yarjNEQpmpti32H4eFthCQoZcKa1vy2X+rnSfzbr4Pn+hfJB6m93wLQ+VST7niiBkSPRrfaW5JulEqA+er/AtqYYW1nmI41kv0YYdAXb6MHH5A/w3lNIW+LHSYhutbnUQsGy8LAu8UBmyJI5qXfyGqQoT8vY7cbhQVy6SSQhJPoORjXXvEjkRIo4IwHYgReuGVuKjsLBiESzlSaSeluauMfTPgaZOnwVXZRSFVpxzjBkD818+qQLCERUJT4TfMHbKfQ\\u003d\\u003d\"},{\"key\":\"arxan\",\"value\":\"1A143E3AE96F2889B5B9E48D21FBAED21ECCCE30C9426E4481E9DFFAD93FAC4E23E9458C38187A75ED32925D60C4F149E8BE2FD50A73EA2CAA59339B4226412FDB55B3FF9B3E90ED0ED1965EA20BF56B9EC4CDD3B1875BA3E8DA7D1101CEBAC6DF6212297DD70CB2A404270596688176D9994BAF70C9C2EBCC7D7F67966A7DD5\"}],\"password\":\"62846284\",\"requestId\":\"SDK\",\"userName\":\"67498614P\"}\r\n ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BSM_API_url}}/session",
+							"host": [
+								"{{BSM_API_url}}"
+							],
+							"path": [
+								"session"
+							]
+						},
+						"description": "Realiza el login a la API BSM - properties usa BSM_API_XXXXX"
+					},
+					"response": []
+				},
+				{
+					"name": "1 - Login API BSM 55417936B",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"pm.globals.set(\"home-banking-id\",\"2175034790\")"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es"
+							},
+							{
+								"key": "Accept",
+								"value": "{{BSM_API_apiversion}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"brand\":\"SAB\",\"compilationType\":\"debug\",\"contract\":\"\",\"csid\":\"c5c5b17e-26b8-4c31-94ef-2fb95071a07f\",\"deviceInfo\":\"en-US GEO() ANDROID 15 sdk_gphone64_arm64 NATIVE_APP 25.3.0 STANDARD\",\"devicePrint\":\"\",\"geolocationData\":\"{\\\"TIMESTAMP\\\":\\\"2025-02-28T11:47:23Z\\\",\\\"TimeZone\\\":\\\"1.0\\\",\\\"HardwareID\\\":\\\"cecac34e-c1b7-4f4b-a7d0-f3663b8c1698\\\",\\\"GeoLocationInfo\\\":[{\\\"Longitude\\\":\\\"-122.084\\\",\\\"Latitude\\\":\\\"37.42199833\\\",\\\"HorizontalAccuracy\\\":\\\"5\\\",\\\"Altitude\\\":\\\"5\\\",\\\"AltitudeAccuracy\\\":\\\"5\\\",\\\"Timestamp\\\":\\\"1740743228249\\\",\\\"Heading\\\":\\\"0\\\",\\\"Speed\\\":\\\"0\\\",\\\"Status\\\":\\\"0\\\"}],\\\"DeviceModel\\\":\\\"sdk_gphone64_arm64\\\",\\\"MultitaskingSupported\\\":true,\\\"DeviceSystemName\\\":\\\"Android\\\",\\\"DeviceSystemVersion\\\":\\\"35\\\",\\\"Languages\\\":\\\"en\\\",\\\"WiFiNetworksData\\\":{\\\"BBSID\\\":\\\"00:13:10:85:fe:01\\\",\\\"SignalStrength\\\":\\\"-50\\\",\\\"SSID\\\":\\\"AndroidWifi\\\"},\\\"BatteryInfo\\\":{\\\"Status\\\":\\\"BATTERY_STATUS_NOT_CHARGING\\\",\\\"Plugged\\\":0,\\\"Level\\\":100,\\\"Voltage\\\":5,\\\"Technology\\\":\\\"Li-ion\\\",\\\"Health\\\":\\\"GOOD\\\"},\\\"CellTowerId\\\":\\\"47108\\\",\\\"LocationAreaCode\\\":\\\"8514\\\",\\\"ScreenSize\\\":\\\"1080x2337\\\",\\\"RSA_ApplicationKey\\\":\\\"BF42CEBDEF7B5087BA25939C892E5F99\\\",\\\"MCC\\\":\\\"310\\\",\\\"MNC\\\":\\\"260\\\",\\\"OS_ID\\\":\\\"dfe347044d290dff\\\",\\\"SDK_VERSION\\\":\\\"6.0\\\",\\\"Compromised\\\":0,\\\"Emulator\\\":8,\\\"PhoneCall_Status\\\":\\\"0\\\",\\\"DeviceName\\\":\\\"emu64a\\\"}\",\"inscriptionKey\":\"\",\"lastKnownBrand\":0,\"lastRequestDate\":\"2025-02-28T12:47:06Z\",\"loginType\":1,\"newDevice\":false,\"parametersBS\":[{\"key\":\"deviceId\",\"value\":\"dfe347044d290dff\"},{\"key\":\"userName\",\"value\":\"ApxU3W7WqrSfU+gjIuNMnWiRyJhaNKiW7KZIUvne4BhhPFZ6FPEYVoKF0ytR/LSTKD+0nFfU8ROYQ5GJ1TRrhc/ge7LQUpYAMRWqcSu+zb9gpdfaP9HG0tvCVxceNrhWZd02O/hUkgtOsPKG5cGcbMDX6ikB+N6z2AHR7qYN7v8bMrv3yeJq9jCsOcOLhf+oAHrqhejoBoiSmVtKV8OAo8INPzEusB9dqWmpkak0Ggnm+0FxeCo6pXWuhlmAzLU6YsEAXg/vfPxtxHuvld3QX/EbjSfO/i2vR4dVSmpRD2K+gSWmCU8oDA/GJGVV9AV7GLmNdNk+cO5USjoxV/g4rg\\u003d\\u003d\"},{\"key\":\"password\",\"value\":\"nYlGNdBBbzcIjVMln7Lsj9B30zW+z10JvZ3rf+pDVPCf1uFf4qgEqbqXnGbBypdjUewbf2rP38QLozkXu7/EAvhH2nOXfOUh/qPi4p3UgTbwTY/7nWs8nksrGYszqilpxq++gK/tBGG5IAsHVZBLR/ZFvKchCjjccd5WWbd9BIA7KPJJ9vbv/t9wgTPFrm6Dpz7n6r1Zq/swCUnh3J/d4HeMIC9JFqYao18S/uHevYckp7uyspDnCCMhjCCESJsN6GKwdpFFK8B/9ZVzkZNhe9P9HypFf/Ku43tjAEvedZMmBNQpEk+HgspRwtHZixnLZb8A/B3bbNqlxLOv/NZroA\\u003d\\u003d\"},{\"key\":\"arxan\",\"value\":\"4308DB796E0EE6D10B6E56F45847931E85D5A4712FD7FD29FD16E0372741B4344EC02CE15CDE2E984586B08406397406AC7FEF530E0EE06D75018D9C1AA7E7E0F1CDCB9F46A7BC2CBD649FD45953EFACAE29509D690F8645C83A03F93E54C9AF94E1B654E02882951732B6254A0805508304B863DA188FB0B9D9A8F53A1748C3\"}],\"password\":\"62846284\",\"requestId\":\"SDK\",\"userName\":\"55417936B\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BSM_API_url}}/session",
+							"host": [
+								"{{BSM_API_url}}"
+							],
+							"path": [
+								"session"
+							]
+						},
+						"description": "Realiza el login a la API BSM - properties usa BSM_API_XXXXX"
+					},
+					"response": []
+				},
+				{
+					"name": "2 - Token BSMP4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"\r",
+									"    pm.test(\"Parse response\", function () {\r",
+									"    var jsonData = JSON.parse(responseBody);\r",
+									"\r",
+									"        //postman.setGlobalVariable(\"sso-token\", jsonData.token);\r",
+									"        pm.globals.set(\"sso-token\", jsonData.token);\r",
+									"        //pm.environment.set(\"sso-token\", jsonData.token);\r",
+									"        //tests[\"Has sso_token: \"+jsonData.token] = jsonData.token;\r",
+									"\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es"
+							},
+							{
+								"key": "Accept",
+								"value": "{{BSM_API_apiversion}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{BSM_API_url}}/mobile/proteo/token",
+							"host": [
+								"{{BSM_API_url}}"
+							],
+							"path": [
+								"mobile",
+								"proteo",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3 - Authorize (Implicit)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 302\", function () {\r",
+									"    pm.response.to.have.status(302);\r",
+									"    pm.response.to.have.header(\"Location\");\r",
+									"\r",
+									"    pm.test(\"Check session params\", function(){\r",
+									"        var location = pm.response.headers.one('Location').value;\r",
+									"        pm.expect(location).to.include(\"code\");\r",
+									"        tests[\"Location is \"+location] = location;\r",
+									"        \r",
+									"        var aToken = location.split(\"code=\")[1];\r",
+									"        pm.globals.set(\"authorization_code\", aToken);\r",
+									"        tests[\"code token is \"+aToken] = aToken;\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var state = Math.floor((Math.random() * 1000000000) + 1);",
+									"pm.globals.set(\"state\", state);",
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{baseUrlAPI}}"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "es-ES,es;q=0.9"
+							},
+							{
+								"key": "Upgrade-Insecure-Requests",
+								"value": "1"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "HEADER.ENV",
+								"value": "{{env}}",
+								"disabled": true
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "{{RequestId}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrlAPI}}/global/v1/oauth2/authorize?client_id={{clientId}}&code_challenge={{codeChallenge}}&code_challenge_method=S256&response_type=code&scope={{scopes}}&redirect_uri={{redirectUri}}&csrf={{sso-token}}&decision=allow&state={{state}}",
+							"host": [
+								"{{baseUrlAPI}}"
+							],
+							"path": [
+								"global",
+								"v1",
+								"oauth2",
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "{{clientId}}"
+								},
+								{
+									"key": "code_challenge",
+									"value": "{{codeChallenge}}"
+								},
+								{
+									"key": "code_challenge_method",
+									"value": "S256"
+								},
+								{
+									"key": "response_type",
+									"value": "code"
+								},
+								{
+									"key": "scope",
+									"value": "{{scopes}}"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{redirectUri}}"
+								},
+								{
+									"key": "csrf",
+									"value": "{{sso-token}}",
+									"description": "\n"
+								},
+								{
+									"key": "HEADER.ENV",
+									"value": "{{env}}",
+									"disabled": true
+								},
+								{
+									"key": "decision",
+									"value": "allow"
+								},
+								{
+									"key": "state",
+									"value": "{{state}}"
+								},
+								{
+									"key": "save_consent",
+									"value": "off",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Auth2 Authorize"
+					},
+					"response": []
+				},
+				{
+					"name": "4 - Token (Authorization Code)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"",
+									"    pm.test(\"Parse response\", function () {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"",
+									"        postman.setGlobalVariable(\"access-token\", jsonData.access_token);",
+									"        tests[\"Has access_token: \"+jsonData.access_token] = jsonData.access_token;",
+									"",
+									"        postman.setGlobalVariable(\"refresh-token\", jsonData.refresh_token);",
+									"        tests[\"Has refresh_token: \"+jsonData.refresh_token] = jsonData.refresh_token;",
+									"",
+									"        postman.setGlobalVariable(\"id-token\", jsonData.id_token);",
+									"        tests[\"Has id_token: \"+jsonData.id_token] = jsonData.id_token;",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "HEADER.ENV",
+								"value": "{{env}}",
+								"disabled": true
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "{{RequestId}}"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "{{authorization_code}}",
+									"type": "text"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{redirectUri}}",
+									"type": "text"
+								},
+								{
+									"key": "code_verifier",
+									"value": "{{codeVerifier}}",
+									"type": "text"
+								},
+								{
+									"key": "clientId",
+									"value": "{{clientId}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseUrlAPI}}/global/v1/oauth2/token",
+							"host": [
+								"{{baseUrlAPI}}"
+							],
+							"path": [
+								"global",
+								"v1",
+								"oauth2",
+								"token"
+							]
+						},
+						"description": "The TPP performs a login "
+					},
+					"response": []
+				},
+				{
+					"name": "5 - Token (JWT token técnico)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"",
+									"    pm.test(\"Parse response\", function () {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"        postman.setGlobalVariable(\"jwtTech\", jsonData.jwtTech);",
+									"        tests[\"Has jwtTech: \"+jsonData.jwtTech] = jsonData.jwtTech;",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json"
+							},
+							{
+								"key": "HEADER.ENV",
+								"value": "{{env}}",
+								"disabled": true
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "{{RequestId}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"at\":\"{{access-token}}\",\r\n    \"idt\":\"{{id-token}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{urlToken}}/jwt/security",
+							"host": [
+								"{{urlToken}}"
+							],
+							"path": [
+								"jwt",
+								"security"
+							]
+						},
+						"description": "The TPP performs a login "
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login INT",
+			"item": [
+				{
+					"name": "1 - Login API BSM",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es"
+							},
+							{
+								"key": "Accept",
+								"value": "{{BSM_API_apiversion}}"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"brand\":\"SAB\",\"compilationType\":\"debug\",\"contract\":\"\",\"csid\":\"925c7566-0133-433d-bfb3-b9ec94b2570b\",\"deviceInfo\":\"en-US GEO() ANDROID 15 sdk_gphone64_arm64 NATIVE_APP 25.3.0 STANDARD\",\"devicePrint\":\"\",\"geolocationData\":\"{\\\"TIMESTAMP\\\":\\\"2025-03-24T11:44:33Z\\\",\\\"TimeZone\\\":\\\"1.0\\\",\\\"HardwareID\\\":\\\"86581a44-51f0-4944-b5bc-976256e188ad\\\",\\\"GeoLocationInfo\\\":[{\\\"Longitude\\\":\\\"-122.084\\\",\\\"Latitude\\\":\\\"37.42199833\\\",\\\"HorizontalAccuracy\\\":\\\"5\\\",\\\"Altitude\\\":\\\"5\\\",\\\"AltitudeAccuracy\\\":\\\"5\\\",\\\"Timestamp\\\":\\\"1742816645068\\\",\\\"Heading\\\":\\\"0\\\",\\\"Speed\\\":\\\"0\\\",\\\"Status\\\":\\\"0\\\"}],\\\"DeviceModel\\\":\\\"sdk_gphone64_arm64\\\",\\\"MultitaskingSupported\\\":true,\\\"DeviceSystemName\\\":\\\"Android\\\",\\\"DeviceSystemVersion\\\":\\\"35\\\",\\\"Languages\\\":\\\"en\\\",\\\"WiFiNetworksData\\\":{\\\"BBSID\\\":\\\"00:13:10:85:fe:01\\\",\\\"SignalStrength\\\":\\\"-50\\\",\\\"SSID\\\":\\\"AndroidWifi\\\"},\\\"BatteryInfo\\\":{\\\"Status\\\":\\\"BATTERY_STATUS_NOT_CHARGING\\\",\\\"Plugged\\\":0,\\\"Level\\\":100,\\\"Voltage\\\":5,\\\"Technology\\\":\\\"Li-ion\\\",\\\"Health\\\":\\\"GOOD\\\"},\\\"CellTowerId\\\":\\\"47108\\\",\\\"LocationAreaCode\\\":\\\"8514\\\",\\\"ScreenSize\\\":\\\"1080x2337\\\",\\\"RSA_ApplicationKey\\\":\\\"66C6EA6B4C8B066B74E87B16E8302D6F\\\",\\\"MCC\\\":\\\"310\\\",\\\"MNC\\\":\\\"260\\\",\\\"OS_ID\\\":\\\"dfe347044d290dff\\\",\\\"SDK_VERSION\\\":\\\"6.0\\\",\\\"Compromised\\\":0,\\\"Emulator\\\":8,\\\"PhoneCall_Status\\\":\\\"0\\\",\\\"DeviceName\\\":\\\"emu64a\\\"}\",\"inscriptionKey\":\"\",\"lastKnownBrand\":0,\"lastRequestDate\":\"2025-03-24T12:44:16Z\",\"loginType\":1,\"newDevice\":false,\"parametersBS\":[{\"key\":\"deviceId\",\"value\":\"dfe347044d290dff\"},{\"key\":\"userName\",\"value\":\"pq6yVdEavWhIS/Zm4CvFjgpqZyrhRREfFAtqeKM6GM+VYj4BUhkg5d7mGz+aQAfIpTfyiELF/Ai1PLVm9Ht077uH5SqHJNxYfg9z1HaJjqKUUnnY2pZcNcMlj/Sr/m0ME4iIqF2J454UQH0yg9gR6oMEMqc9ztImgTFZFDL/PLAxq+/SF+YpRnUfz/gb8kdvkKCrVS4QA9fCqN4oiqfu/bwUXr03hKiFmjkD20mefCVhq922eDWC5XG129efxq8Cy1xsaZj6ft3DDMToYzwvcTaC1TVtu+UpLcM/M1AzmvvAISizDhZ0rmm/kqCsCloExgBIZVIq0WcLuVvfX2Y7rg\\u003d\\u003d\"},{\"key\":\"password\",\"value\":\"XlCcSQxDSL5qjFbUQAKu2JxjtmY2NuCvFi9deWxQlKX9J69aQnPdOXnHcy6aeFPSM+k7WyeK99iAYjKM2DO6hBc8TWamdyXlMQuOPauE/lqCPrqgNCKYv+/uOqVppeXyod9UTQBbmdOAw0kkKo82ufulKXZLdrFUyrXQF3VsozSHlYhNTI9dWvlng35R/ZJMavz2VKxiOYE/fk4X3yJKYcPrUPvBWHJD3solg7JaWLD80auBeRziVApmd+RH29aZKjykimbumLaz8a5EP4WEv0Xmwsgp60ytWywimAAm1dJ29m7nxavI7Sf/ee5MIwOxVC8hxuQkIWT6WHeRjNdDww\\u003d\\u003d\"},{\"key\":\"arxan\",\"value\":\"9C6AC8A355B1E614438FA82B055219D1D1A08500C244718C83D095ABC39E3E722C7017965B379F3D0C70B7B3D97938FD917A78C5E5F2FABE6307060E15F50E0B939E2761BC12341AA11EC2CFAFBEA99D498775D2FB6DC1075692F7F52321619AF572EAAD5B8C16CC913EEF1337B06E5ABBBD91977827551FF08C1A7F3D7F8E2C\"}],\"password\":\"6284\",\"requestId\":\"SDK\",\"userName\":\"32011178P\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{BSM_API_url}}/session",
+							"host": [
+								"{{BSM_API_url}}"
+							],
+							"path": [
+								"session"
+							]
+						},
+						"description": "Realiza el login a la API BSM - properties usa BSM_API_XXXXX"
+					},
+					"response": []
+				},
+				{
+					"name": "2 - Token BSMP4",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"\r",
+									"    pm.test(\"Parse response\", function () {\r",
+									"    var jsonData = JSON.parse(responseBody);\r",
+									"\r",
+									"        //postman.setGlobalVariable(\"sso-token\", jsonData.token);\r",
+									"        pm.globals.set(\"sso-token\", jsonData.token);\r",
+									"        //pm.environment.set(\"sso-token\", jsonData.token);\r",
+									"        tests[\"Has sso_token: \"+jsonData.token] = jsonData.token;\r",
+									"\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept-Language",
+								"value": "es",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "{{BSM_API_apiversion}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{BSM_API_url}}/mobile/proteo/token",
+							"host": [
+								"{{BSM_API_url}}"
+							],
+							"path": [
+								"mobile",
+								"proteo",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3 - Authorize (Implicit)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 302\", function () {\r",
+									"    pm.response.to.have.status(302);\r",
+									"    pm.response.to.have.header(\"Location\");\r",
+									"\r",
+									"\r",
+									"    pm.test(\"Check session params\", function(){\r",
+									"        var location = pm.response.headers.one('Location').value;\r",
+									"        pm.expect(location).to.include(\"code\");\r",
+									"        tests[\"Location is \"+location] = location;\r",
+									"        \r",
+									"        var aToken = location.split(\"code=\")[1];\r",
+									"        pm.globals.set(\"authorization_code\", aToken);\r",
+									"        tests[\"code token is \"+aToken] = aToken;\r",
+									"\r",
+									"\r",
+									"    });\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									"var state = Math.floor((Math.random() * 1000000000) + 1);",
+									"postman.setGlobalVariable(\"state\", state);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"followRedirects": false
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "{{caserver}}",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Encoding",
+								"value": "gzip, deflate, br",
+								"type": "text"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "es-ES,es;q=0.9",
+								"type": "text"
+							},
+							{
+								"key": "Upgrade-Insecure-Requests",
+								"value": "1",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "HEADER.ENV",
+								"value": "{{env}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "{{RequestId}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{caserver}}/global/v1/oauth2/authorize?client_id={{clientId}}&code_challenge={{codeChallenge}}&code_challenge_method=S256&response_type=code&scope={{scopes}}&redirect_uri={{redirectUri}}&csrf={{sso-token}}&decision=allow&state={{state}}",
+							"host": [
+								"{{caserver}}"
+							],
+							"path": [
+								"global",
+								"v1",
+								"oauth2",
+								"authorize"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "{{clientId}}"
+								},
+								{
+									"key": "code_challenge",
+									"value": "{{codeChallenge}}"
+								},
+								{
+									"key": "code_challenge_method",
+									"value": "S256"
+								},
+								{
+									"key": "response_type",
+									"value": "code"
+								},
+								{
+									"key": "scope",
+									"value": "{{scopes}}"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{redirectUri}}"
+								},
+								{
+									"key": "csrf",
+									"value": "{{sso-token}}",
+									"description": "\n"
+								},
+								{
+									"key": "HEADER.ENV",
+									"value": "{{env}}",
+									"disabled": true
+								},
+								{
+									"key": "decision",
+									"value": "allow"
+								},
+								{
+									"key": "state",
+									"value": "{{state}}"
+								},
+								{
+									"key": "save_consent",
+									"value": "off",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Auth2 Authorize"
+					},
+					"response": []
+				},
+				{
+					"name": "4 - Token (Authorization Code)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"",
+									"    pm.test(\"Parse response\", function () {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"",
+									"        postman.setGlobalVariable(\"access-token\", jsonData.access_token);",
+									"        tests[\"Has access_token: \"+jsonData.access_token] = jsonData.access_token;",
+									"",
+									"        postman.setGlobalVariable(\"refresh-token\", jsonData.refresh_token);",
+									"        tests[\"Has refresh_token: \"+jsonData.refresh_token] = jsonData.refresh_token;",
+									"",
+									"        postman.setGlobalVariable(\"id-token\", jsonData.id_token);",
+									"        tests[\"Has id_token: \"+jsonData.id_token] = jsonData.id_token;",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "HEADER.ENV",
+								"value": "{{env}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "{{RequestId}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "{{authorization_code}}",
+									"type": "text"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "{{redirectUri}}",
+									"type": "text"
+								},
+								{
+									"key": "code_verifier",
+									"value": "{{codeVerifier}}",
+									"type": "text"
+								},
+								{
+									"key": "clientId",
+									"value": "{{clientId}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{caserver}}/global/v1/oauth2/token",
+							"host": [
+								"{{caserver}}"
+							],
+							"path": [
+								"global",
+								"v1",
+								"oauth2",
+								"token"
+							]
+						},
+						"description": "The TPP performs a login "
+					},
+					"response": []
+				},
+				{
+					"name": "5 - Token (JWT token técnico)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"",
+									"    pm.test(\"Parse response\", function () {",
+									"    var jsonData = JSON.parse(responseBody);",
+									"        postman.setGlobalVariable(\"jwtTech\", jsonData.jwtTech);",
+									"        tests[\"Has jwtTech: \"+jsonData.jwtTech] = jsonData.jwtTech;",
+									"    });",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "HEADER.ENV",
+								"value": "{{env}}",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "X-Request-ID",
+								"value": "{{RequestId}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"at\":\"{{access-token}}\",\r\n    \"idt\":\"{{id-token}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://ms-infra-security-jwt-int-ns-inf.apps.int.aws.bancsabadell.com/jwt/security?productType=DV",
+							"protocol": "https",
+							"host": [
+								"ms-infra-security-jwt-int-ns-inf",
+								"apps",
+								"int",
+								"aws",
+								"bancsabadell",
+								"com"
+							],
+							"path": [
+								"jwt",
+								"security"
+							],
+							"query": [
+								{
+									"key": "productType",
+									"value": "DV"
+								}
+							]
+						},
+						"description": "The TPP performs a login "
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
